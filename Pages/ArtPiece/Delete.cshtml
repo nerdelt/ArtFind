@@ -1,0 +1,52 @@
+@page
+@model artfind.Pages.ArtPiece.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ArtPiece</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtPiece.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArtPiece.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtPiece.Artist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArtPiece.Artist.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtPiece.YearCreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArtPiece.YearCreated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtPiece.Medium)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArtPiece.Medium)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtPiece.CountryCreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArtPiece.CountryCreated)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ArtPiece.ArtPieceID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

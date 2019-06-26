@@ -1,0 +1,19 @@
+﻿using System;
+namespace artfind.Models
+{
+    public class ArtPiece
+    {
+       public int ArtID { get; set; }
+       public string Title { get; set; }
+       public int ArtistID { get; set; }
+
+
+       public Artist Artist { get; set; }
+       public int YearCreated { get; set; }
+       public string Medium { get; set; }
+       public string CountryCreated { get; set; }
+       //public Current Location
+       //photo of work
+
+    }
+}

@@ -1,0 +1,67 @@
+﻿using artfind.Data;
+using artfind.Models;
+using Microsoft.AspNetCore.Identity;
+using System;
+using System.Linq;
+
+namespace artfind.Models
+{
+    public static class DbInitializer
+    {
+        public static UserManager<AppUser> UserManager { get; set; }
+
+        public static void Initialize(ApplicationDbContext context)
+        {
+            // context.Database.EnsureCreated();
+
+            // Look for any artists.
+            if (UserManager.FindByEmailAsync("nerdelt@artfind.local").GetAwaiter().GetResult() == null)
+            {
+                var user = new AppUser
+                {
+                    FirstName = "Natalie",
+                    LastName = "Erdelt",
+                    UserName = "nerdelt@artfind.local",
+                    Email = "nerdelt@artfind.local",
+                    EmailConfirmed = true,
+                    LockoutEnabled = false
+                };
+
+                UserManager.CreateAsync(user, "P@ssword1").GetAwaiter().GetResult();
+            }
+
+            if (context.Artist.Any())
+            {
+                return;   // DB has been seeded
+            }
+
+            var artists = new Artist[]
+            {
+            new Artist{FirstName="Artemisia",LastName="Gentileschi",Gender=(Gender)2, Nationality="Italian"}, 
+            new Artist{FirstName="Anders", LastName="Zorn", Gender=(Gender)1, Nationality="Sweedish"}
+           
+            };
+            foreach (Artist s in artists)
+            {
+                context.Artist.Add(s);
+            }
+            context.SaveChanges();
+
+            var artworks = new Art[]
+            {
+            new Art{ArtID=1,Title="Danaë", ArtistID = 1, YearCreated = 1612, Medium = "Oil on Canvas", CountryCreated = "Italy"},
+            new Art{ArtID=2, Title= "Lucy Turner Joy", ArtistID=2, YearCreated = 1897, Medium = "Oil on Canvas", CountryCreated = "Sweeden"}
+
+            };
+            foreach (Art a in artworks)
+            {
+                context.Art.Add(a);
+            }
+            context.SaveChanges();
+
+           
+
+
+        }
+    }
+}
