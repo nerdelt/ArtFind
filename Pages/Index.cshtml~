@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <p>
+    <img src="./Photos/scope.jpg" alt="scope"/>
+    <div class="form-actions no-color">
+        <input class="centered"  type="text" name="SearchString" placeholder="art all around you"/>
+        <input class="centered2" class="btn btn-default" type="submit" value="find" />     
+        </p>
+    </div>
+</div>
+
+        <footer>photo by S O C I A L . C U T on Unsplash</footer>

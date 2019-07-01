@@ -47,15 +47,15 @@ namespace artfind.Models
             }
             context.SaveChanges();
 
-            var artworks = new Art[]
+            var artworks = new ArtPiece[]
             {
-            new Art{ArtID=1,Title="Danaë", ArtistID = 1, YearCreated = 1612, Medium = "Oil on Canvas", CountryCreated = "Italy"},
-            new Art{ArtID=2, Title= "Lucy Turner Joy", ArtistID=2, YearCreated = 1897, Medium = "Oil on Canvas", CountryCreated = "Sweeden"}
+            new ArtPiece{ArtPieceID=1,Title="Danaë", ArtistID = 1, YearCreated = 1612, Medium = "Oil on Canvas", CountryCreated = "Italy"},
+            new ArtPiece{ArtPieceID=2, Title= "Lucy Turner Joy", ArtistID=2, YearCreated = 1897, Medium = "Oil on Canvas", CountryCreated = "Sweeden"}
 
             };
-            foreach (Art a in artworks)
+            foreach (ArtPiece a in artworks)
             {
-                context.Art.Add(a);
+                context.ArtPiece.Add(a);
             }
             context.SaveChanges();
 

@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=localhost;Database=ArtFind;User Id=sa;Password=reallyStrongPwd123;",
+    "ApplicationDbContext": "Data Source=localhost;Database=ArtFind;User Id=sa;Password=reallyStrongPwd123;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

@@ -22,7 +22,7 @@ namespace artfind.Data
         }
 
         public DbSet<artfind.Models.Artist> Artist { get; set; }
-        public DbSet<artfind.Models.Art> Art { get; set; }
+        public DbSet<artfind.Models.ArtPiece> ArtPiece{ get; set; }
 
     }
 }

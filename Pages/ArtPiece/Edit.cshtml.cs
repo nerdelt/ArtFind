@@ -21,7 +21,7 @@ namespace artfind.Pages.ArtPiece
         }
 
         [BindProperty]
-        public ArtPiece ArtPiece { get; set; }
+        public artfind.Models.ArtPiece ArtPiece { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

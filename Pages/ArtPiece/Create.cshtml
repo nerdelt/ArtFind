@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model artfind.Pages.ArtPiece.CreateModel
 
 @{
@@ -7,7 +7,7 @@
 
 <h2>Create</h2>
 
-<h4>ArtPiece</h4>
+<h4>Art</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,8 +19,8 @@
                 <span asp-validation-for="ArtPiece.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ArtPiece.ArtistID" class="control-label"></label>
-                <select asp-for="ArtPiece.ArtistID" class ="form-control" asp-items="ViewBag.ArtistID"></select>
+                <label asp-for="ArtPiece.Artist" class="control-label"></label>
+                <select asp-for="ArtPiece.Artist" class ="form-control" asp-items="ViewBag.ArtPiece.Artist.FirstName"></select>
             </div>
             <div class="form-group">
                 <label asp-for="ArtPiece.YearCreated" class="control-label"></label>

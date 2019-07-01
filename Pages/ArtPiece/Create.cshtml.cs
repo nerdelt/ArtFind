@@ -21,12 +21,12 @@ namespace artfind.Pages.ArtPiece
 
         public IActionResult OnGet()
         {
-        ViewData["ArtistID"] = new SelectList(_context.Artist, "ID", "ID");
+        ViewData["ArtistID"] = new SelectList(_context.Artist, "ID", "FullName");
             return Page();
         }
 
         [BindProperty]
-        public ArtPiece ArtPiece { get; set; }
+        public artfind.Models.ArtPiece ArtPiece { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {

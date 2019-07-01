@@ -19,7 +19,7 @@ namespace artfind.Pages.ArtPiece
             _context = context;
         }
 
-        public ArtPiece ArtPiece { get; set; }
+        public artfind.Models.ArtPiece ArtPiece { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,7 +29,9 @@ namespace artfind.Pages.ArtPiece
             }
 
             ArtPiece = await _context.ArtPiece
-                .Include(a => a.Artist).FirstOrDefaultAsync(m => m.ArtPieceID == id);
+                .Include(a => a.Artist)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ArtPieceID == id);
 
             if (ArtPiece == null)
             {

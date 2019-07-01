@@ -26,7 +26,7 @@ namespace artfind.Pages.ArtPiece
         }
 
         [BindProperty]
-        public artfind.Models.ArtPiece Art { get; set; }
+        public artfind.Models.ArtPiece ArtPiece { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -35,7 +35,7 @@ namespace artfind.Pages.ArtPiece
                 return Page();
             }
 
-            _context.ArtPiece.Add(Art);
+            _context.ArtPiece.Add(ArtPiece);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

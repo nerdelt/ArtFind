@@ -19,7 +19,7 @@ namespace artfind.Pages.ArtPiece
             _context = context;
         }
 
-        public IList<ArtPiece> ArtPiece { get;set; }
+        public IList<artfind.Models.ArtPiece> ArtPiece { get;set; }
 
         public async Task OnGetAsync()
         {

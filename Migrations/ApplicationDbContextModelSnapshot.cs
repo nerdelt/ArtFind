@@ -15,7 +15,7 @@ namespace artfind.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
+                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -187,9 +187,9 @@ namespace artfind.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("artfind.Models.Art", b =>
+            modelBuilder.Entity("artfind.Models.ArtPiece", b =>
                 {
-                    b.Property<int>("ArtID")
+                    b.Property<int>("ArtPieceID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -197,17 +197,19 @@ namespace artfind.Migrations
 
                     b.Property<string>("CountryCreated");
 
+                    b.Property<string>("Dimensions");
+
                     b.Property<string>("Medium");
 
                     b.Property<string>("Title");
 
-                    b.Property<DateTime>("YearCreated");
+                    b.Property<int>("YearCreated");
 
-                    b.HasKey("ArtID");
+                    b.HasKey("ArtPieceID");
 
                     b.HasIndex("ArtistID");
 
-                    b.ToTable("Art");
+                    b.ToTable("ArtPiece");
                 });
 
             modelBuilder.Entity("artfind.Models.Artist", b =>
@@ -220,7 +222,7 @@ namespace artfind.Migrations
 
                     b.Property<string>("FirstName");
 
-                    b.Property<int>("Gender");
+                    b.Property<int?>("Gender");
 
                     b.Property<string>("LastName");
 
@@ -276,7 +278,7 @@ namespace artfind.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("artfind.Models.Art", b =>
+            modelBuilder.Entity("artfind.Models.ArtPiece", b =>
                 {
                     b.HasOne("artfind.Models.Artist", "Artist")
                         .WithMany()
