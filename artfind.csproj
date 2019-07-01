@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-artfind-3AA797F5-9E9D-4824-BDC9-86A18D2C4D1E</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="app.db" />
+    <None Remove="Data\DbInitializer.cs~" />
+    <None Remove="Data\:Users:admin:artfind:Pages:Art:Create.cshtml~" />
+    <None Remove="Data\:Users:admin:artfind:Pages:Art:Create.cshtml.cs~" />
+    <None Remove="Data\:Users:admin:artfind:Pages:Art:Delete.cshtml.cs~" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+    <PackageReference Include="Roslynator.Analyzers" Version="2.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.CodeFixes" Version="2.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Photos\" />
+    <Folder Include="Models\" />
+    <Folder Include="Areas\Identity\Pages\Shared\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Photos\iu.jpeg" />
+    <Content Remove="wwwroot\Photos\iu.jpg" />
+    <Content Remove="wwwroot\Photos\scope.jpg" />
+    <Content Remove="Areas\Identity\Pages\Shared\_Layout.cshtml" />
+    <Content Remove="Data\:Users:admin:artfind:Pages:Art:Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Photos\scope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20190314002249_Initial.cs" />
+    <Compile Remove="Data\Migrations\20190314002249_Initial.Designer.cs" />
+    <Compile Remove="Data\EmptyClass.cs" />
+    <Compile Remove="Models\Art.cs" />
+    <Compile Remove="Data\:Users:admin:artfind:Pages:Art:Create.cshtml.cs" />
+    <Compile Remove="Data\:Users:admin:artfind:Pages:Art:Delete.cshtml.cs" />
+  </ItemGroup>
+</Project>

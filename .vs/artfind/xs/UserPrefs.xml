@@ -1,0 +1,64 @@
+﻿<Properties StartupConfiguration="{566B1E04-61AF-4E06-9304-7C6F445737B4}|Default">
+  <MonoDevelop.Ide.ItemProperties.artfind PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.razor.design/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets">
+    <Files>
+      <File FileName="wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="2961" Column="13" />
+      <File FileName="Program.cs" Line="39" Column="1" />
+      <File FileName="Pages/ArtPiece/Create.cshtml" Line="20" Column="19" />
+      <File FileName="Pages/ArtPiece/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Artists/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Models/Artist.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Create.cshtml.cs" Line="28" Column="23" />
+      <File FileName="Pages/ArtPiece/Index.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Models/ArtPiece.cs" Line="1" Column="1" />
+      <File FileName="Pages/Artists/Index.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Create.cshtml~" Line="1" Column="1" />
+      <File FileName="../../../usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.razor.design/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets" Line="131" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="artfind" expanded="True">
+            <Node name="artfind" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Manage" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Artists" expanded="True" />
+                <Node name="ArtPiece" expanded="True">
+                  <Node name="Create.cshtml.cs" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="dist" expanded="True">
+                      <Node name="css" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
