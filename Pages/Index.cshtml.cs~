@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using artfind.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using artfind.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
-namespace artfind.Pages.Artists
+namespace artfind.Pages
 {
     public class IndexModel : PageModel
     {
@@ -19,17 +19,18 @@ namespace artfind.Pages.Artists
             _context = context;
         }
 
-        public IList<Artist> Artist { get;set; }
-
+        public IList<Artist> Artist { get; set; }
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        public string CurrentFilter { get; set; }
+        public SelectList FullNames { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string TheFullName { get; set; }
 
         public async Task OnGetAsync()
         {
-            IQueryable<Artist> artists = from a in _context.Artist
-                         select a;
+            var artists = from a in _context.Artist
+                          select a;
 
             if (!string.IsNullOrEmpty(SearchString))
             {
@@ -42,3 +43,4 @@ namespace artfind.Pages.Artists
         }
     }
 }
+

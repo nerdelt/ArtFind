@@ -1,20 +1,21 @@
-﻿@page
-@model IndexModel
+﻿@page "{searchString?}"
+@model artfind.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
-}
+    //<div class="form-actions no-color">
 
-<div class="text-center">
-    <p>
-    <img src="./Photos/scope.jpg" alt="scope"/>
+
+    }
+
+<form asp-page="./Artists/Index" method="get">
     <div class="form-actions no-color">
-        <input class="centered2 btn btn-light" type="submit" value="find" />
-        <input class ="centered" type="text" name="SearchString" placeholder="art all around you"/>
+        <p>
+            <img src="./Photos/scope.jpg" alt="scope" />
+            <input class="centered2 btn btn-light" type="submit" value="find" />
+            <input class="centered" type="text" asp-for="SearchString" value="@Model.CurrentFilter" />
 
         </p>
-    </div>
-</div>
-
-
+        </div>
+</form>
 
         <footer>photo by S O C I A L . C U T on Unsplash</footer>

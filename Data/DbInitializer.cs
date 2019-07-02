@@ -38,7 +38,7 @@ namespace artfind.Models
             var artists = new Artist[]
             {
             new Artist{FirstName="Artemisia",LastName="Gentileschi",Gender=(Gender)2, Nationality="Italian"}, 
-            new Artist{FirstName="Anders", LastName="Zorn", Gender=(Gender)1, Nationality="Sweedish"}
+            new Artist{FirstName="Anders", LastName="Zorn",Gender=(Gender)1, Nationality="Sweedish"}
            
             };
             foreach (Artist s in artists)
