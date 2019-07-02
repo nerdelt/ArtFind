@@ -32,13 +32,13 @@ namespace artfind.Models
         }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString="{0:yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString="{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Birthdate { get; set; }
 
         public string Nationality { get; set; }
 
         public Gender? Gender { get; set; }
-        //public ICollection<Art> Art { get; set; }
+        //public ICollection<Art> Art { get; set; }/
 
     }
 }

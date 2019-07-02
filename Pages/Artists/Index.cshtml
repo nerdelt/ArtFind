@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model artfind.Pages.Artists.IndexModel
 
 @{
@@ -35,10 +35,10 @@
 @foreach (var item in Model.Artist) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Birthdate)

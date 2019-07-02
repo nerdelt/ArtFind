@@ -37,7 +37,7 @@ namespace artfind.Pages.ArtPiece
             {
                 return NotFound();
             }
-           ViewData["ArtistID"] = new SelectList(_context.Artist, "ID", "ID");
+           ViewData["ArtistID"] = new SelectList(_context.Artist, "ID", "FullName");
             return Page();
         }
 
