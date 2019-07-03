@@ -10,27 +10,44 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].Title)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.TitleSort">@Html.DisplayNameFor(model => model.ArtPiece[0].Title)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].Artist)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ArtistSort">@Html.DisplayNameFor(model => model.ArtPiece[0].Artist)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].YearCreated)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">@Html.DisplayNameFor(model => model.ArtPiece[0].YearCreated)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ArtPiece[0].Medium)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].CurrentLocation)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.LocationSort" > @Html.DisplayNameFor(model => model.ArtPiece[0].CurrentLocation)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].Dimensions)
-            </th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DimSort" >
+                    @Html.DisplayNameFor(model => model.ArtPiece[0].Dimensions)
+                </a>
+             </th>
             <th></th>
         </tr>
     </thead>
@@ -64,3 +81,25 @@
 }
     </tbody>
 </table>
+
+@{
+    //var prevDisabled = !Model.ArtPiece.HasPreviousPage ? "disabled" : "";
+    //var nextDisabled = !Model.ArtPiece.HasNextPage ? "disabled" : "";
+}
+    
+<!--@{ /*<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.ArtPiece.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.ArtPiece.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+        */}-->
+

@@ -21,19 +21,27 @@ namespace artfind.Pages.Artists
 
         [BindProperty]
         public Artist Artist { get; set; }
+        public string ErrorMessage { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id, bool? saveChangesError = false)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            Artist = await _context.Artist.FirstOrDefaultAsync(m => m.ID == id);
+            Artist = await _context.Artist
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
 
             if (Artist == null)
             {
                 return NotFound();
+            }
+
+            if (saveChangesError.GetValueOrDefault())
+            {
+                ErrorMessage = "Delete failed. Try again";
             }
             return Page();
         }
@@ -45,15 +53,27 @@ namespace artfind.Pages.Artists
                 return NotFound();
             }
 
-            Artist = await _context.Artist.FindAsync(id);
+            Artist = await _context.Artist
+                 .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Artist != null)
+            if (Artist == null)
             {
+                return NotFound();
+            }
+            try
+            { 
                 _context.Artist.Remove(Artist);
                 await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
             }
 
-            return RedirectToPage("./Index");
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.)
+                return RedirectToAction("./Delete",
+                                     new { id, saveChangesError = true });
+            }
         }
     }
 }

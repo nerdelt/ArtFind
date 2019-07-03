@@ -35,6 +35,8 @@ namespace artfind.Pages.ArtPiece
                 return Page();
             }
 
+            //var emptyArtPiece = new ArtPiece();
+
             _context.ArtPiece.Add(ArtPiece);
             await _context.SaveChangesAsync();
 

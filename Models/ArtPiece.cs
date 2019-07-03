@@ -7,7 +7,8 @@ namespace artfind.Models
     {
        public int ArtPieceID { get; set; }
 
-       public string Title { get; set; }
+        [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
+        public string Title { get; set; }
 
        public int ArtistID { get; set; }
 

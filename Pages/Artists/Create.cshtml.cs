@@ -40,4 +40,5 @@ namespace artfind.Pages.Artists
             return RedirectToPage("./Index");
         }
     }
-}
+}   
+

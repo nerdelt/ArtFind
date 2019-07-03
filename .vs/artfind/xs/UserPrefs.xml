@@ -1,50 +1,25 @@
 ﻿<Properties StartupConfiguration="{566B1E04-61AF-4E06-9304-7C6F445737B4}|Default">
   <MonoDevelop.Ide.ItemProperties.artfind PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/ArtPiece/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/ArtPiece.cs">
     <Files>
-      <File FileName="Pages/Artists/Index.cshtml" Line="56" Column="6" />
-      <File FileName="Pages/Artists/Index.cshtml.cs" Line="39" Column="14" />
-      <File FileName="Data/DbInitializer.cs" Line="56" Column="15" />
-      <File FileName="Models/Artist.cs" Line="1" Column="1" />
-      <File FileName="Pages/ArtPiece/Index.cshtml" Line="60" Column="93" />
+      <File FileName="Data/DbInitializer.cs" Line="48" Column="14" />
       <File FileName="Program.cs" Line="39" Column="1" />
-      <File FileName="Program.cs" Line="39" Column="1" />
-      <File FileName="Models/ArtPiece.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Index.cshtml" Line="16" Column="12" />
+      <File FileName="Pages/ArtPiece/Index.cshtml.cs" Line="107" Column="1" />
+      <File FileName="Models/Artist.cs" Line="25" Column="93" />
+      <File FileName="Models/ArtPiece.cs" Line="10" Column="93" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="artfind" expanded="True">
             <Node name="artfind" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True">
-                  <Node name="Pages" expanded="True">
-                    <Node name="Account" expanded="True">
-                      <Node name="Manage" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
+              <Node name="Models" expanded="True">
+                <Node name="ArtPiece.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="Artists" expanded="True" />
-                <Node name="ArtPiece" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-                <Node name="js" expanded="True" />
-                <Node name="lib" expanded="True">
-                  <Node name="bootstrap" expanded="True">
-                    <Node name="dist" expanded="True">
-                      <Node name="css" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
+                <Node name="ArtPiece" expanded="True" />
               </Node>
             </Node>
           </Node>

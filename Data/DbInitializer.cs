@@ -37,7 +37,7 @@ namespace artfind.Models
 
             var artists = new Artist[]
             {
-            new Artist{FirstName="Artemisia",LastName="Gentileschi",Gender=(Gender)2, Nationality="Italian", Birthdate=DateTime.Parse("1593-07-08") }, 
+            new Artist{FirstName="Artemisia",LastName="Gentileschi",Gender=(Gender)0, Nationality="Italian", Birthdate=DateTime.Parse("1593-07-08") }, 
             new Artist{FirstName="Anders", LastName="Zorn",Gender=(Gender)1, Nationality="Swedish", Birthdate=DateTime.Parse("1860-02-18")},
             new Artist{FirstName="John Singer", LastName="Sargent",Gender=(Gender)1, Nationality="American", Birthdate=DateTime.Parse("1865-01-12")}
 
