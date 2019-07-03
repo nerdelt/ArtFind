@@ -33,9 +33,11 @@ namespace artfind.Pages.Artists
 
             if (!string.IsNullOrEmpty(SearchString))
             {
-                artists = artists.Where(s => s.LastName.Contains(SearchString)
-                || s.FirstName.Contains(SearchString)
-                || s.Nationality.Contains(SearchString));
+                artists = artists.Where//(s => s.LastName.Contains(SearchString)
+                //|| s.FirstName.Contains(SearchString)
+                //||
+                (s => s.LastName.Contains(SearchString) && s.FirstName.Contains(SearchString));
+                //|| s.Nationality.Contains(SearchString));
             }
 
             Artist = await artists.ToListAsync();

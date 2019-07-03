@@ -23,6 +23,7 @@ namespace artfind.Models
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
+        [Display(Name ="Name")]
         public string FullName
         {
             get
