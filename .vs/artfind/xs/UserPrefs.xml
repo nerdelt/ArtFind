@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{566B1E04-61AF-4E06-9304-7C6F445737B4}|Default">
   <MonoDevelop.Ide.ItemProperties.artfind PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Artist.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/ArtPiece/Index.cshtml">
     <Files>
-      <File FileName="Pages/Artists/Index.cshtml" Line="43" Column="64" />
+      <File FileName="Pages/Artists/Index.cshtml" Line="56" Column="6" />
       <File FileName="Pages/Artists/Index.cshtml.cs" Line="39" Column="14" />
-      <File FileName="Data/DbInitializer.cs" Line="53" Column="62" />
+      <File FileName="Data/DbInitializer.cs" Line="56" Column="15" />
       <File FileName="Models/Artist.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Index.cshtml" Line="60" Column="93" />
+      <File FileName="Program.cs" Line="39" Column="1" />
+      <File FileName="Program.cs" Line="39" Column="1" />
+      <File FileName="Models/ArtPiece.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,12 +26,13 @@
                 </Node>
               </Node>
               <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Artist.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="Artists" expanded="True" />
-                <Node name="ArtPiece" expanded="True" />
+                <Node name="ArtPiece" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
