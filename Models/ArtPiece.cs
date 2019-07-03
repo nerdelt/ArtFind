@@ -16,12 +16,23 @@ namespace artfind.Models
        [Display(Name = "Year Created")]
        public int YearCreated { get; set; }
 
-       public string Dimensions { get; set; }
+       public double Height { get; set; }
+
+       public double Width { get; set; }
+
+       public string Dimensions
+        {
+            get
+            {
+                return $"{Height} cm x {Width} cm";
+            }
+        }
+
 
        public string Medium { get; set; }
 
-       [Display(Name = "Country Created")]
-       public string CountryCreated { get; set; }
+       [Display(Name = "Current Location")]
+       public string CurrentLocation{ get; set; }
 
 
 

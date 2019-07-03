@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using artfind.Data;
 
 namespace artfind.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190703002611_New Stuff")]
+    partial class NewStuff
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -197,13 +199,11 @@ namespace artfind.Migrations
 
                     b.Property<string>("CurrentLocation");
 
-                    b.Property<double>("Height");
+                    b.Property<int>("Dimensions");
 
                     b.Property<string>("Medium");
 
                     b.Property<string>("Title");
-
-                    b.Property<double>("Width");
 
                     b.Property<int>("YearCreated");
 

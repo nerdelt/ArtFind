@@ -26,7 +26,10 @@
                 @Html.DisplayNameFor(model => model.ArtPiece[0].Medium)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ArtPiece[0].CountryCreated)
+                @Html.DisplayNameFor(model => model.ArtPiece[0].CurrentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtPiece[0].Dimensions)
             </th>
             <th></th>
         </tr>
@@ -47,7 +50,10 @@
                 @Html.DisplayFor(modelItem => item.Medium)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CountryCreated)
+                @Html.DisplayFor(modelItem => item.CurrentLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dimensions)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ArtPieceID">Edit</a> |

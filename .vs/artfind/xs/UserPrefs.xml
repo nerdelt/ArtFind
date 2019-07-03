@@ -1,20 +1,26 @@
 ﻿<Properties StartupConfiguration="{566B1E04-61AF-4E06-9304-7C6F445737B4}|Default">
   <MonoDevelop.Ide.ItemProperties.artfind PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Artists/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/ArtPiece/Edit.cshtml">
     <Files>
       <File FileName="wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="2961" Column="13" />
       <File FileName="Program.cs" Line="39" Column="1" />
       <File FileName="Pages/ArtPiece/Create.cshtml~" Line="1" Column="1" />
       <File FileName="../../../usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.razor.design/2.2.0/build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.CodeGeneration.targets" Line="131" Column="5" />
-      <File FileName="Pages/Artists/Create.cshtml.cs" Line="1" Column="1" />
-      <File FileName="Pages/Artists/Create.cshtml" Line="38" Column="39" />
-      <File FileName="Pages/Artists/Edit.cshtml" Line="21" Column="19" />
-      <File FileName="Pages/Artists/Details.cshtml" Line="26" Column="14" />
-      <File FileName="Pages/ArtPiece/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Pages/Artists/Index.cshtml.cs" Line="16" Column="1" />
-      <File FileName="Pages/Index.cshtml" Line="2" Column="40" />
-      <File FileName="Pages/Artists/Index.cshtml" Line="58" Column="63" />
-      <File FileName="Pages/Index.cshtml.cs" Line="27" Column="6" />
+      <File FileName="Pages/ArtPiece/Index.cshtml" Line="32" Column="76" />
+      <File FileName="Models/ArtPiece.cs" Line="27" Column="48" />
+      <File FileName="Models/ArtPiece.cs~" Line="25" Column="26" />
+      <File FileName="Pages/ArtPiece/Create.cshtml" Line="45" Column="19" />
+      <File FileName="Pages/ArtPiece/Create.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Delete.cshtml" Line="45" Column="11" />
+      <File FileName="Pages/ArtPiece/Delete.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Details.cshtml" Line="48" Column="65" />
+      <File FileName="Pages/ArtPiece/Edit.cshtml" Line="47" Column="16" />
+      <File FileName="Pages/ArtPiece/Index.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Data/DbInitializer.cs" Line="41" Column="94" />
+      <File FileName="Data/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="Models/Artist.cs" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Details.cshtml~" Line="1" Column="1" />
+      <File FileName="Pages/ArtPiece/Details.cshtml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,10 +39,10 @@
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Artists" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
+                <Node name="Artists" expanded="True" />
+                <Node name="ArtPiece" expanded="True">
+                  <Node name="Edit.cshtml" selected="True" />
                 </Node>
-                <Node name="ArtPiece" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">

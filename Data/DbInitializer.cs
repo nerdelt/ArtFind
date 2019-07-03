@@ -38,7 +38,7 @@ namespace artfind.Models
             var artists = new Artist[]
             {
             new Artist{FirstName="Artemisia",LastName="Gentileschi",Gender=(Gender)2, Nationality="Italian"}, 
-            new Artist{FirstName="Anders", LastName="Zorn",Gender=(Gender)1, Nationality="Sweedish"}
+            new Artist{FirstName="Anders", LastName="Zorn",Gender=(Gender)1, Nationality="Swedish"}
            
             };
             foreach (Artist s in artists)
@@ -49,8 +49,8 @@ namespace artfind.Models
 
             var artworks = new ArtPiece[]
             {
-            new ArtPiece{ArtPieceID=1,Title="Danaë", ArtistID = 1, YearCreated = 1612, Medium = "Oil on Canvas", CountryCreated = "Italy"},
-            new ArtPiece{ArtPieceID=2, Title= "Lucy Turner Joy", ArtistID=2, YearCreated = 1897, Medium = "Oil on Canvas", CountryCreated = "Sweeden"}
+            new ArtPiece{ArtPieceID=1,Title="Danaë", ArtistID = 1, YearCreated = 1612, Medium = "Oil on Canvas", CurrentLocation = "St. Louis Art Museum", Height= 41.5 , Width = 52.5},
+            new ArtPiece{ArtPieceID=2, Title= "Lucy Turner Joy", ArtistID=2, YearCreated = 1897, Medium = "Oil on Canvas", CurrentLocation = "St. Louis Art Museum", Height=61.6 , Width = 76.8}
 
             };
             foreach (ArtPiece a in artworks)
